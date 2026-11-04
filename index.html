@@ -20,7 +20,7 @@ draw();
 
 // Check the live GitHub Pages HTML on every app launch and when returning to the app.
 // Cache-busting on the request avoids stale Safari / home-screen caches.
-const SUDOKU_REVISION='20261103';
+const SUDOKU_REVISION='20261104';
 let lastRevisionCheck=0,revisionCheckInProgress=false;
 async function checkLatestPuzzle(){
   if(revisionCheckInProgress || Date.now()-lastRevisionCheck<15000 || !navigator.onLine)return;

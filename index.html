@@ -3,8 +3,8 @@
 </style></head><body><main class="wrap"><header><h1 id="puzzleTitle">数独</h1><div class="mode"><button id="answer" class="active">数字入力</button><button id="candidate">候補消去</button></div></header><div id="board" class="board" aria-label="数独盤面"></div><div class="status"><span id="pos">1行・1列</span><span id="saveStatus">保存状態を確認中</span></div><div id="keys" class="keys"></div><div class="tools"><button id="backup">途中経過を保存</button><label for="import" class="filebtn">保存データを復元</label><input type="file" id="import" accept=".json,application/json"><button id="undo">ひとつ戻す</button><button id="reset">最初から</button></div><p class="help">このゲームは個人情報の入力・送信を行いません。進行状況はこの端末のブラウザ内に保存されます。<br> 空欄を選び、下の数字を押してください。候補消去では数字を押すたびに候補が消去・復活します。保存データには入力数字と候補消去の両方が入ります。</p></main><script>
 'use strict';
 // ▼▼▼ 毎日の更新は次の2行だけ。2行まとめて置き換えてください。 ▼▼▼
-const PUZZLE_DATE='2026-11-11', DIFFICULTY='初級';
-const givens=[0,0,0,2,0,0,0,0,5,1,0,0,8,0,0,0,0,9,7,3,0,0,4,1,2,6,0,9,2,0,0,0,7,4,0,0,4,0,0,0,0,0,0,0,6,0,0,8,1,0,0,0,2,7,0,4,1,7,6,0,0,9,3,8,0,0,0,0,5,0,0,4,5,0,0,0,0,3,0,0,0];
+const PUZZLE_DATE='2026-11-12', DIFFICULTY='初級';
+const givens=[1,9,0,0,4,0,0,5,2,0,0,0,0,2,0,0,0,0,0,0,3,8,6,5,7,0,0,8,0,0,0,0,0,0,0,9,6,0,0,1,7,3,0,0,5,4,0,0,0,0,0,0,0,3,0,0,6,2,3,4,5,0,0,0,0,0,0,9,0,0,0,0,3,7,0,0,1,0,0,8,4];
 // ▲▲▲ ここまで ▲▲▲
 const DATE_ID=PUZZLE_DATE.replace(/-/g,'');
 const KEY='sudoku-'+DATE_ID+'-v1';
